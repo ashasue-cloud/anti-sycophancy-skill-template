@@ -65,7 +65,7 @@ I found support for narrowing claims before synthesis, but I do not have enough 
 ## Fail Example
 
 ```text
-Based on the research, the best practice is to add an anti-sycophancy section and a proof ledger.
+Based on the research, the best practice is to add an anti-sycophancy section and an evidence table.
 ```
 
-Why it fails: it states "best practice" and recommends the artifact without showing which source supports which part.
+Why it fails: it states "best practice" and recommends the template without showing which source supports which part.

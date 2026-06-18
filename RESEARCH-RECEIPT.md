@@ -14,7 +14,7 @@ Targeted web research pass on 2026-05-31. Priority order:
 
 1. Primary research on sycophancy, user-belief matching, warmth/persona tradeoffs, and self-correction limits.
 2. Provider documentation or public postmortems from OpenAI, Anthropic, and Google.
-3. Prompt/eval guidance that can be converted into workflow instructions, regression prompts, and proof gates.
+3. Prompt/eval guidance that can be converted into workflow instructions, regression prompts, and required proof checks.
 
 ## Sources Searched
 
@@ -43,10 +43,10 @@ Targeted web research pass on 2026-05-31. Priority order:
 | Template claim | Status | Source support | Limit |
 |---|---|---|---|
 | LLMs can become overly agreeable or sycophantic. | Supported | OpenAI sycophancy postmortem; sycophancy research paper; warmth/sycophancy research. | Public OpenAI incident is GPT-4o, not GPT-5.5. |
-| "Be honest" instructions are weaker than workflow gates with evidence requirements. | Supported by synthesis | OpenAI Model Spec, Anthropic eval docs, Google prompt docs, self-correction paper. | No source directly tests this exact template. |
+| "Be honest" instructions are weaker than workflow rules with evidence requirements. | Supported by synthesis | OpenAI Model Spec, Anthropic eval docs, Google prompt docs, self-correction paper. | No source directly tests this exact template. |
 | Self-reported checks are not enough proof. | Supported | Self-correction paper; Anthropic eval docs. | The exact phrase "checkmarks are not proof" is Ashley's product principle, not a source quote. |
-| Proof should change what the model is allowed to claim. | Inferred design principle | Supported indirectly by Model Spec, eval docs, and self-correction limits. | This is the artifact's fresh angle, not a directly sourced best practice. |
-| Proof should be visible in the user's work surface. | Inferred product principle | Supported indirectly by the failure mode: hidden or unchecked proof can become self-report. | Needs user testing to prove inspection behavior improves. |
+| Proof should change what the model is allowed to claim. | Inferred design principle | Supported indirectly by Model Spec, eval docs, and self-correction limits. | This is the template's fresh angle, not a directly sourced best practice. |
+| Proof should be visible where the user is making the decision. | Inferred product principle | Supported indirectly by the failure mode: hidden or unchecked proof can become self-report. | Needs user testing to prove inspection behavior improves. |
 | Claude workflows benefit from explicit structure/examples. | Supported | Anthropic XML-tag and prompt docs. | Does not prove anti-sycophancy performance by itself. |
 | Gemini workflows benefit from separating verification from generation and mapping claims to sources. | Supported by synthesis | Google prompting docs plus source-grounding/proof principle. | Needs Gemini-specific eval before claiming model-specific effectiveness. |
 | GPT-5.5 needs special anti-sycophancy handling. | Not proven | Motivated by Ashley's observed experience; no exact source captured here. | Keep GPT-5.5 addendum as validation-needed. |
@@ -83,7 +83,7 @@ Required examples:
 - Provider docs support structured prompting and evals, but they do not prove model-specific addenda are sufficient.
 - The OpenAI sycophancy postmortem is about GPT-4o behavior, not GPT-5.5.
 - The strongest public claim is "research-informed template experiment," not "proven best practice."
-- The user-inspection question is still open: users may still trust a proof ledger too quickly unless proof is short, visible, and decision-critical.
+- The user-inspection question is still open: users may still trust an evidence table too quickly unless proof is short, visible, and decision-critical.
 
 ## Safe Public Claims
 
@@ -111,8 +111,8 @@ Claude/Gemini/GPT-5.5 addenda are validated model-specific best practices.
 
 ## What Remains Unproven
 
-- Whether users inspect the proof surface under deadline pressure.
-- Whether a short proof ledger improves trust calibration more than a source receipt alone.
+- Whether users inspect the evidence under deadline pressure.
+- Whether a short evidence table improves trust calibration more than a source receipt alone.
 - Whether this template reduces sycophancy across GPT-5.5, Claude, Gemini, and other models.
 - Whether the model follows the block/narrow/contradict rule reliably after long sessions or context compaction.
-- Whether this template works better as global custom instructions, skill-local instructions, command-local gates, or task-specific checklists.
+- Whether this template works better as global custom instructions, instructions inside a specific skill, instructions inside a specific command, or task-specific checklists.

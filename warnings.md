@@ -4,7 +4,7 @@ Use these warnings in any public README, skill pack, or install instructions.
 
 ## This Does Not Make A Model Honest
 
-This template changes the workflow contract. It does not change the model's underlying incentives, training, memory, or provider behavior.
+This template changes the workflow rules. It does not change the model's underlying incentives, training, memory, or provider behavior.
 
 An LLM can still:
 
@@ -13,7 +13,7 @@ An LLM can still:
 - claim it opened a file it did not open
 - mark a weak claim as verified
 - overgeneralize from narrow evidence
-- skip a gate and sound confident anyway
+- skip a required step and sound confident anyway
 
 The value is not that lying becomes impossible. The value is that unsupported confidence becomes easier to catch and harder to pass through the workflow.
 
@@ -82,7 +82,7 @@ Re-run the regression prompts when:
 - changing effort levels
 - changing providers
 - updating a skill
-- adding a new workflow gate
+- adding a new workflow step
 - seeing a new false-Green failure
 - using the workflow for a higher-stakes task
 

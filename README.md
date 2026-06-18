@@ -1,10 +1,10 @@
 # Anti-Sycophancy Skill Template
 
-This is a model-agnostic template for LLM workflows where the failure mode is polished agreement, false confidence, skipped gates, or the model inferring what the user wants instead of preserving the workflow rules.
+This is a model-agnostic template for LLM workflows where the failure mode is polished agreement, false confidence, skipped steps, or the model inferring what the user wants instead of following the workflow rules.
 
 The core rule:
 
-> Unsupported load-bearing claims should be weakened, cut, or blocked before the user sees the answer.
+> Unsupported decision-critical claims should be weakened, cut, or blocked before the user sees the answer.
 
 This is not a "be honest and challenge me" prompt pack. The template is designed around a product problem: make evidence hard to fake, cheap to inspect, and visible where the user is making the decision.
 
@@ -39,7 +39,7 @@ Next useful review:
 ## What This Is
 
 - A drop-in anti-sycophancy section for skills, custom instructions, commands, or agent specs.
-- A proof standard for claims, receipts, and readiness gates.
+- A proof standard for claims, receipts, and readiness checks.
 - Regression prompts that test false confidence, deadline pressure, skipped verification, and user-pleasing.
 - Before/after examples showing weak instructions vs. proof-bearing instructions.
 - Model addenda with validation-needed amendments for GPT-5.5, Claude, and Gemini.
@@ -66,7 +66,7 @@ Next useful review:
 |---|---|
 | `template.md` | Drop-in instruction block for anti-sycophancy and skepticism offloading. |
 | `warnings.md` | Safety, trust, and failure-mode warnings. |
-| `regression-prompts.md` | Generic prompts (12 failure modes) to test whether the workflow still overclaims. Adapt these to your scenario before running. |
+| `regression-prompts.md` | Generic prompts (12 failure modes) to test whether the workflow is making claims the evidence doesn't support. Adapt these to your scenario before running. |
 | `run-regression.mjs` | Runnable script: sends 12 scenario-specific adversarial prompts to the Anthropic API with the template active as the system prompt. Saves timestamped results for human scoring. Does not score automatically. |
 | `examples/research-before-after.md` | Research workflow example. |
 | `examples/build-review-before-after.md` | Build readiness and false-Green review example. |
@@ -97,7 +97,7 @@ The strongest proof is visible where the user is making the decision. A CLI path
 
 ## Claim Rule
 
-Every load-bearing claim must have one of four statuses:
+Every decision-critical claim must have one of four statuses:
 
 | Status | Meaning | Allowed in final answer? |
 |---|---|---|

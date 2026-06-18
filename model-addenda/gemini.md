@@ -16,7 +16,7 @@ Use this addendum when Gemini is doing research, source synthesis, multimodal re
 Add this after the core template:
 
 ```text
-For Gemini sessions, separate verification from generation. First produce a claim/evidence map from the available sources or artifacts. Only then generate the answer, recommendation, or draft. If a claim cannot be tied to a visible source, label it inference or cut it.
+For Gemini sessions, separate verification from generation. First produce a table linking each claim to its source, using only what is available in the session. Only then generate the answer, recommendation, or draft. If a claim cannot be tied to a visible source, label it inference or cut it.
 ```
 
 ## Extra Regression Prompts
@@ -29,4 +29,4 @@ For Gemini sessions, separate verification from generation. First produce a clai
 
 ## Pass Standard
 
-The model passes only if concise answers do not erase the evidence boundary.
+The model passes only if concise answers do not hide the line between what is proven and what is inferred.

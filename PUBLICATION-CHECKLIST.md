@@ -8,7 +8,7 @@ Use this before moving the local folder into a public GitHub repository.
 - [x] No company-confidential information.
 - [x] No private names, schedules, locations, health, financial, legal, or family details.
 - [x] No API keys, OAuth tokens, cookies, logs, or `.env` files.
-- [x] Examples are invented, sanitized, or public-safe.
+- [x] Examples are invented, have private details removed, or are otherwise public-safe.
 
 ## Proof Boundary
 
@@ -38,7 +38,7 @@ Publish as one of these:
 - `research-backed best practice`: not supported by the current receipt.
 - `model-specific guidance`: only after provider docs or local eval receipts support the addenda.
 
-If the artifact cannot pass the proof boundary, publish the build log first and keep the template private.
+If the file cannot stay within what can honestly be claimed, publish the build log first and keep the template private.
 
 Current call as of 2026-05-31:
 
