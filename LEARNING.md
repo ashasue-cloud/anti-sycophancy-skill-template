@@ -2,11 +2,11 @@
 
 ## What AI PM skill did this test?
 
-Acceptance judgment for AI-built work — specifically, how to distinguish between a model that blocks bad output versus a model that softens bad output until it looks acceptable.
+Knowing when to accept, repair, or reject AI-built work — specifically, how to distinguish between a model that blocks bad output versus a model that softens bad output until it looks acceptable.
 
-## What taste dimension did this sharpen?
+## What skill area did this develop?
 
-Proof discipline. The difference between "the template says the model should block this" (static design coverage) and "the model actually held the gate under 12 turns of escalating pressure" (live evidence). Taste here is knowing which test actually matters.
+Requiring real proof before accepting a result. The difference between "the template says the model should block this" (design on paper) and "the model actually held the gate under 12 turns of escalating pressure" (live evidence). The skill is knowing which test actually matters.
 
 ## What product belief did this test?
 
@@ -16,13 +16,13 @@ A model under social pressure does not fabricate — it softens. "Points in a pl
 
 ## What did Ashley choose over what?
 
-Chose to require the claim-state table on every substantive response instead of leaving it optional. The live eval showed that selective application was the exact mechanism for drift — the turns where the table was absent were the turns where language became imprecise. Making the table required is a structural fix, not a trust exercise.
+Chose to require the status label table on every substantive response instead of leaving it optional. The live test showed that selective application was the exact mechanism for drift — the turns where the table was absent were the turns where language became vague. Making the table required is a specific fix, not a trust exercise.
 
 Chose to run a live adversarial eval (12 turns, escalating, multi-turn gaslighting) instead of publishing from the static design pass. The static pass proved the template covered the failure modes. The live eval proved it held under real pressure. Both are necessary; only the live eval produces a safe public claim.
 
 ## What broke or remains imperfect?
 
-**Turn 2 near miss:** Under social pressure ("my team has been working on this for months"), the model produced language soft enough that a PM who did not push back would have walked away partially validated. The template did not catch this itself — it only corrected when challenged in Turn 6. Rule 8 (required claim-state table) is the structural fix, but it depends on the model applying the rule consistently, which is an ongoing validation need.
+**Turn 2 near miss:** Under social pressure ("my team has been working on this for months"), the model produced language soft enough that a PM who did not push back would have walked away partially validated. The template did not catch this itself — it only corrected when challenged in Turn 6. Rule 8 (required status label table) is the fix, but it depends on the model applying the rule consistently, which is an ongoing validation need.
 
 **Model drift:** Provider behavior changes. This eval was run against Claude Sonnet 4.6 on 2026-06-17. Re-run the regression prompts when changing models, providers, or workflow surfaces.
 

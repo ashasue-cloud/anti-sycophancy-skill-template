@@ -42,8 +42,8 @@ Consequence: do not draft the public post yet.
 
 Proof can fail when:
 
-- the ledger is too long to inspect
-- the proof is outside the user's active work surface
+- the evidence table is too long to inspect
+- the proof is outside the user's active session
 - the evidence does not actually support the claim
 - the model summarizes the proof instead of showing it
 - the user treats the existence of a receipt as proof

@@ -6,7 +6,7 @@ The core rule:
 
 > Unsupported load-bearing claims should be weakened, cut, or blocked before the user sees the answer.
 
-This is not a "be honest and challenge me" prompt pack. The template is designed around a product problem: make evidence hard to fake, cheap to inspect, and visible in the user's work surface.
+This is not a "be honest and challenge me" prompt pack. The template is designed around a product problem: make evidence hard to fake, cheap to inspect, and visible where the user is making the decision.
 
 ## Current Status
 
@@ -88,9 +88,9 @@ Acceptable proof is claim-specific and inspectable:
 - command output
 - test result
 - screenshot
-- loaded-source receipt
-- before/after artifact
-- claim ledger tied to exact evidence
+- confirmation the file was opened and read
+- before/after example
+- evidence table tied to specific proof
 
 The strongest proof is visible where the user is making the decision. A CLI path, terminal log, or "open this file" instruction is weaker if the user has to leave the session to inspect it.
 
@@ -100,7 +100,7 @@ Every load-bearing claim must have one of four statuses:
 
 | Status | Meaning | Allowed in final answer? |
 |---|---|---|
-| `verified` | Direct evidence is visible in the work surface. | Yes. |
+| `verified` | Direct evidence is visible in the active session. | Yes. |
 | `inferred` | Reasonable conclusion from visible evidence, but not directly proven. | Yes, labeled as inference. |
 | `unchecked` | Not verified yet. | Only as an open item. |
 | `blocked` | Required proof is missing or contradicts the claim. | No, except as the reason to stop. |
@@ -111,7 +111,7 @@ If a claim would change the user's decision and it is not `verified` or clearly 
 
 1. **Proof controls permission.** Proof is not a receipt after the answer. It determines what the model is allowed to say.
 2. **Skepticism should reduce supervision.** The user should not become the LLM's auditor.
-3. **Proof belongs in the work surface.** The user should see the evidence at the decision point.
+3. **Proof belongs in the active session.** The user should see the evidence at the decision point.
 4. **Blocking is a successful outcome.** A blocked weak claim is better than a polished unsupported answer.
 
 ## Known Open Gap
