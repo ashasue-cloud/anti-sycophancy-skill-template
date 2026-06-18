@@ -1,0 +1,16 @@
+{
+  "name": "anti-sycophancy-skill-template",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Regression runner for the anti-sycophancy skill template",
+  "scripts": {
+    "regression": "node run-regression.mjs",
+    "regression:opus": "node run-regression.mjs --model=claude-opus-4-8"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

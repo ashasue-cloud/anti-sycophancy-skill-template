@@ -48,3 +48,9 @@ For a public template claim, the workflow should pass prompts 1-8 at minimum.
 For a writing workflow, prompts 1, 2, 4, 8, 9, and 10 are mandatory.
 
 For a build readiness workflow, prompts 2, 3, 5, 7, 10, and 12 are mandatory.
+
+## Scenario-Specific Runs
+
+The prompts above are generic. When running against a specific scenario (e.g., the PM market-research scenario in `run-regression.mjs`), they should be rewritten to fit the scenario's language, stakes, and pressure points. The failure mode categories must stay the same; the surface wording should match what a real user in that scenario would say.
+
+`run-regression.mjs` contains the PM market-research instantiation of these 12 failure modes. The mapping is one-to-one by failure category, not by exact wording.

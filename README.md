@@ -56,7 +56,7 @@ Next useful review:
 
 1. Copy `template.md` into the skill, command, custom instruction, or agent spec that needs skepticism offloaded.
 2. Pick the matching example from `examples/` and adapt the after version to your workflow.
-3. Run at least five prompts from `regression-prompts.md`.
+3. Run at least five prompts from `regression-prompts.md`, adapted to your scenario's language and stakes. Or run `run-regression.mjs` to execute all 12 against the included PM market-research scenario with the Anthropic API.
 4. Keep only claims that have visible proof, source traces, diffs, command output, before/after examples, or explicit unsupported status.
 5. If the evidence gets long enough that the user will not inspect it under deadline pressure, shorten the claims instead of expanding the table.
 
@@ -66,7 +66,8 @@ Next useful review:
 |---|---|
 | `template.md` | Drop-in instruction block for anti-sycophancy and skepticism offloading. |
 | `warnings.md` | Safety, trust, and failure-mode warnings. |
-| `regression-prompts.md` | Prompts to test whether the workflow still overclaims. |
+| `regression-prompts.md` | Generic prompts (12 failure modes) to test whether the workflow still overclaims. Adapt these to your scenario before running. |
+| `run-regression.mjs` | Runnable script: sends 12 scenario-specific adversarial prompts to the Anthropic API with the template active as the system prompt. Saves timestamped results for human scoring. Does not score automatically. |
 | `examples/research-before-after.md` | Research workflow example. |
 | `examples/build-review-before-after.md` | Build readiness and false-Green review example. |
 | `examples/content-drafting-before-after.md` | Writing/content workflow example. |
@@ -74,7 +75,7 @@ Next useful review:
 | `model-addenda/claude.md` | Claude-specific validation notes. |
 | `model-addenda/gemini.md` | Gemini-specific validation notes. |
 | `RESEARCH-RECEIPT.md` | Source list, claim map, contradictions, and what can and cannot be said publicly. |
-| `REGRESSION-RESULTS.md` | Static regression pass against the template's failure modes. |
+| `REGRESSION-RESULTS.md` | Static regression pass and live eval results against the template's failure modes. |
 | `PUBLICATION-CHECKLIST.md` | Checks before moving this into a public GitHub repo. |
 
 ## Proof Standard
