@@ -32,7 +32,7 @@ Bad:
 Better:
 
 ```text
-Claim: "The artifact is content-ready."
+Claim: "The file is content-ready."
 Status: blocked
 Visible proof: README exists; before/after examples exist; exact research bibliography is missing.
 Consequence: do not draft the public post yet.
@@ -55,7 +55,7 @@ If proof makes the user do more auditing, the product design is failing.
 
 The safest way to reduce false confidence is to make fewer claims.
 
-Do not create a giant proof ledger for a giant answer. Cut the answer to the claims that matter, then prove those.
+Do not create a giant evidence table for a giant answer. Cut the answer to the claims that matter, then prove those.
 
 ## High-Stakes Boundary
 
@@ -88,7 +88,7 @@ Re-run the regression prompts when:
 
 ## Public Release Boundary
 
-Before publishing this as a public repo, read `RESEARCH-RECEIPT.md` and keep the claim boundary intact. The artifact can be published as a research-informed template experiment, but not as a proven best practice or validated model-specific fix.
+Before publishing this as a public repo, read `RESEARCH-RECEIPT.md` and stay within what you can honestly say. This file can be published as a research-informed template experiment, but not as a proven best practice or validated model-specific fix.
 
 ## Trust Test
 

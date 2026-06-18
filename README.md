@@ -16,7 +16,7 @@ Supported:
 
 - The template has a saved research receipt with source links and claim mapping.
 - The template has a static regression pass against the failure modes it claims to address.
-- The package is public-safe at the local artifact level: invented examples, no private data, no credentials.
+- The package is public-safe as a local copy: invented examples, no private data, no credentials.
 
 Not supported:
 
@@ -33,7 +33,7 @@ Next useful review:
 ## First Use Cases
 
 - Research workflows where the model may summarize sources too confidently.
-- Build review workflows where the model may mark a weak artifact as ready.
+- Build review workflows where the model may mark a weak build or output as ready.
 - Content drafting workflows where the model may flatten the user's judgment into a polished generic post.
 
 ## What This Is
@@ -57,8 +57,8 @@ Next useful review:
 1. Copy `template.md` into the skill, command, custom instruction, or agent spec that needs skepticism offloaded.
 2. Pick the matching example from `examples/` and adapt the after version to your workflow.
 3. Run at least five prompts from `regression-prompts.md`.
-4. Keep only claims that have visible proof, source traces, diffs, command output, before/after artifacts, or explicit unsupported status.
-5. If the proof surface gets long enough that the user will not inspect it under deadline pressure, shorten the claims instead of expanding the ledger.
+4. Keep only claims that have visible proof, source traces, diffs, command output, before/after examples, or explicit unsupported status.
+5. If the evidence gets long enough that the user will not inspect it under deadline pressure, shorten the claims instead of expanding the table.
 
 ## Files
 
@@ -73,7 +73,7 @@ Next useful review:
 | `model-addenda/gpt-5-5.md` | GPT-5.5-specific validation notes. |
 | `model-addenda/claude.md` | Claude-specific validation notes. |
 | `model-addenda/gemini.md` | Gemini-specific validation notes. |
-| `RESEARCH-RECEIPT.md` | Source list, claim map, contradictions, and public claim boundary. |
+| `RESEARCH-RECEIPT.md` | Source list, claim map, contradictions, and what can and cannot be said publicly. |
 | `REGRESSION-RESULTS.md` | Static regression pass against the template's failure modes. |
 | `PUBLICATION-CHECKLIST.md` | Checks before moving this into a public GitHub repo. |
 
