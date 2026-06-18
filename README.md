@@ -1,6 +1,6 @@
 # Anti-Sycophancy Skill Template
 
-This is a model-agnostic template for LLM workflows where the failure mode is not obvious refusal. The failure mode is polished agreement, false confidence, skipped gates, or the model inferring what the user wants instead of preserving the workflow contract.
+This is a model-agnostic template for LLM workflows where the failure mode is polished agreement, false confidence, skipped gates, or the model inferring what the user wants instead of preserving the workflow rules.
 
 The core rule:
 
