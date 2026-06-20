@@ -38,6 +38,8 @@ Chose to run a live adversarial eval (12 turns, escalating, multi-turn gaslighti
 - Add a workflow-specific variant (e.g., code review, product spec review) with scenario-matched examples
 - Build a CLI or wrapper that installs the template section automatically into a target skill file
 
-## What rationale explains the extension path?
+## LinkedIn post published
 
-The template is model-agnostic by design — it targets workflow behavior, not model internals. That makes it extensible to any model or workflow where the failure mode is polished agreement rather than obvious refusal. The regression prompt set is reusable across those extensions without modification.
+Post published 2026-06-19. Safe claim held: research-informed template experiment with live adversarial eval pass on Claude Sonnet 4.6.
+
+Next step: collect one real dogfood use case where the template changed a real build decision. That becomes the next content angle. Do not claim adoption proof until that exists.
